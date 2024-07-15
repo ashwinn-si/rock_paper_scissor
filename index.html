@@ -13,45 +13,56 @@
 
 <body>
     <div class="container">
-        <p class="header">STONE PAPER SCISSORS</p>
+        <div class="head_container">
+            <p class="reset_text" onclick="reset()">RESET</p>
+            <p class="header">STONE PAPER SCISSORS</p>
+            <p class="rounds_text">ROUND : <span id="round_count">10</span></p>
+        </div>
+        
         <div class="move_box">
             <div class="img_box">
-                <img src="images/stone.png">
+                <img src="images/rock.png" onclick="main('rock')">
                 
             </div>
             <div class="img_box">
-                <img src="images/paper.png">
+                <img src="images/paper.png" onclick="main('paper')">
             </div>
             <div class="img_box">
-                <img src="images/scissor.png">
+                <img src="images/scissor.png" onclick="main('scissor')">
             </div>
 
         </div>
-        <div class="moves_result_box">
-            <div>
+        <div class="compute_box">
+            <div class="moves_result_box">
                 <div>
-                    YOUR MOVE
+                    <div>
+                        YOUR MOVE
+                    </div>
+                    <div class="result_img">
+                        <img src="images/paper.png" id="player_move_image">
+                    </div>
                 </div>
-                <div class="result_img">
-                    <img src="images/paper.png">
+                <div class="curr_result_shower" id="result_text_box">
+                    <p id="result_text">result</p>
+                </div>
+                <div>
+                    <div style="font-size: 0.9rem;">
+                        COMPUTER MOVE
+                    </div>
+                    <div class="result_img">
+                        <img src="images/scissor.png" id="computer_move_img">
+                    </div>
+    
                 </div>
             </div>
-            <div>
-                <div>
-                    COMPUTER MOVE
-                </div>
-                <div class="result_img">
-                    <img src="images/scissor.png">
-                </div>
-
+            <div class="result_container">
+                <div ><p>SCORE CARD</p></div>
+                <div class="win_container"><p id="win_text">10</p></div>
+                <div class="loss_container"><p id="loss_text">10</p></div>
+                <div class="tie_container"><p id="tie_text">10</p></div>
             </div>
         </div>
-        <div class="result_container">
-            <div><p>RESULT</p></div>
-            <div class="win_container"><p>10</p></div>
-            <div class="loss_container"><p>10</p></div>
-            <div class="tie_container"><p>10</p></div>
-        </div>
+        
     </div>
     <script src="script.js"></script>
 </body>

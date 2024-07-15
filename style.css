@@ -6,19 +6,41 @@
     font-family: "Playwrite CU";
 }
 body{
-    background: rgb(255,166,0);
-    background: -moz-linear-gradient(84deg, rgba(255,166,0,1) 0%, rgba(221, 26, 26, 0.947) 50%, rgba(255,153,0,1) 100%);
-    background: -webkit-linear-gradient(84deg, rgba(255,166,0,1) 0%, rgba(221, 26, 26, 0.947) 50%, rgba(255,153,0,1) 100%);
-    background: linear-gradient(84deg, rgba(255,166,0,1) 0%, rgba(221, 26, 26, 0.947) 50%, rgba(255,153,0,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#ffa600",endColorstr="#ff9900",GradientType=1);
+    overflow-y: hidden;
+    background-color: darkgray;
 }
-.container .header{
-    color: white;
-    margin: 10px 0px;
+.head_container{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 10px;
     font-size: 1.5rem;
+}
+.reset_text{
+    font-size: 1.2rem;
+    background-color: black;
+    color: red;
+    padding: 10px;
+    border-radius: 20px;
+    display: none;
+}
+.rounds_text{
+    font-size: 1.2rem;
+    background-color: rgb(119, 255, 0);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 20px;
+    display: none;
+}
+.header{
+    color: white;
     font-weight: bold;
     text-align: center;
 
+}
+.compute_box{
+    display: none;
 }
 .move_box{
     margin: 30px 0px;
@@ -26,7 +48,7 @@ body{
     flex-direction: row;
     width: 100%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .img_box{
     padding: 10px;
@@ -50,7 +72,7 @@ body{
     margin: 10px 0;
     width: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 .moves_result_box div{
@@ -58,12 +80,14 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    font-weight: bold;
     width: 40%;
     height: 200px;
     font-weight: bold;
     color: #05445E;
 }
 .result_img{
+    padding: 10px;
     border-radius: 50%;
     border-style: solid;
     border-color: white;
@@ -72,14 +96,23 @@ body{
     
     padding: 10px;
     border-width: 5px;
-    height: 200px;
+    height: 190px;
     object-fit: cover;
     object-position: center;
+}
+.curr_result_shower{
+    width: 5%;
+}
+#result_text{
+    font-size: 2.3rem;
+    background-color: black;
+    padding: 1% 10%;
+    border-radius: 30px;
 }
 .result_container{
     margin: 38px 0;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     display: flex;
     text-align: center;
@@ -91,6 +124,7 @@ body{
     height: 50px;
     width: 20%;
     height: 100px;
+    font-weight: bold;
 
 }
 .win_container{
