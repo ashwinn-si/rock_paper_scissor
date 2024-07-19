@@ -82,18 +82,18 @@ function image_changer(player_move,computer_move){
     let computer_img=document.getElementById("computer_move_img");
     let player_img=document.getElementById("player_move_image");
     if(computer_move=='rock'){
-        computer_img.src="images/rock.png";
+        computer_img.src="../images/rock.png";
     }else if(computer_move=='paper'){
-        computer_img.src="images/paper.png";
+        computer_img.src="../images/paper.png";
     }else{
-        computer_img.src="images/scissor.png";
+        computer_img.src="../images/scissor.png";
     }
     if(player_move=='rock'){
-        player_img.src="images/rock.png";
+        player_img.src="../images/rock.png";
     }else if(player_move=='paper'){
-        player_img.src="images/paper.png";
+        player_img.src="../images/paper.png";
     }else{
-        player_img.src="images/scissor.png";
+        player_img.src="../images/scissor.png";
     }
 }
 

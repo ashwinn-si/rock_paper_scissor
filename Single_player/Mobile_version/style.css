@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Playwrite CU";
+}
+body{
+   
+    background-color: darkgray;
+}
+.head_container{
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 10px;
+    font-size: 1rem;
+}
+.reset_text{
+    cursor: pointer;
+    font-size: 0.5rem;
+    background-color: black;
+    color: red;
+    padding: 10px;
+    border-radius: 20px;
+    display: none;
+   
+}
+.rounds_text{
+    display: none;
+    font-size: 0.5rem;
+    background-color: rgb(119, 255, 0);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 20px;
+   
+}
+.header{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+
+}
+.move_box_1{
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.move_box_2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_box{
+    padding: 10px;
+    border-color: #FFFF00;
+    border-style: solid;
+    border-radius: 70%;
+    border-width: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    object-fit: cover;
+    object-position: center;
+}
+.img_box img{
+    height: 95px;
+    object-fit: cover;
+    object-position: center;
+}
+.compute_box{
+    display: none;
+}
+
+
+.moves_result_box{
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.moves_result_box div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    width: 55%;
+    height: 95px;
+    font-weight: bold;
+    font-size: 0.7rem;
+    color: #05445E;
+}
+.result_img{
+    padding: 10px;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px;
+}
+.result_img img{
+    padding: 10px;
+    border-width: 5px;
+    height: 90px;
+    object-fit: cover;
+    object-position: center;
+}
+.curr_result_shower{
+    width: 5%;
+}
+#result_text{
+    font-size: 1rem;
+    background-color: black;
+    padding: 1% 10%;
+    border-radius: 30px;
+}
+
+
+.result_container{
+    margin: 38px 0;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    text-align: center;
+}
+.result_container div{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 20%;
+    height: 100px;
+    font-weight: bold;
+
+}
+.win_container{
+    color: white;
+    background-color: rgb(0, 255, 34);
+    border-radius: 20px;
+}
+.loss_container{
+    color: white;
+    border-radius: 20px;
+    background-color: red;
+}
+.tie_container{
+    color: white;
+    border-radius: 20px;
+    background-color: gray;
+}

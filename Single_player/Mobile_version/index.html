@@ -1,58 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCK PAPER SCISSORS</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <div class="container">
         <div class="head_container">
             <p class="reset_text" onclick="reset()">RESET</p>
             <p class="header">STONE PAPER SCISSORS</p>
-            <p class="rounds_text">ROUND : <span id="round_count">10</span></p>
+            <p class="rounds_text">ROUND<br><span id="round_count">1</span></p>
         </div>
-        
-        <div class="move_box" >
+        <div class="move_box_1" >
             <div class="img_box" onclick="main('rock')">
-                <img src="images/rock.png" >
+                <img src="../images/rock.png" >
                 
             </div>
             <div class="img_box" onclick="main('paper')">
-                <img src="images/paper.png" >
+                <img src="../images/paper.png" >
             </div>
+        </div>
+        <div class="move_box_2">
             <div class="img_box" onclick="main('scissor')">
-                <img src="images/scissor.png">
+                <img src="../images/scissor.png">
             </div>
-
         </div>
         <div class="compute_box">
             <div class="moves_result_box">
                 <div>
+                    
+                    <div class="result_img">
+                        <img src="../images/rock.png" id="player_move_image">
+                    </div>
                     <div>
                         YOUR MOVE
-                    </div>
-                    <div class="result_img">
-                        <img src="images/paper.png" id="player_move_image">
                     </div>
                 </div>
                 <div class="curr_result_shower" id="result_text_box">
                     <p id="result_text">result</p>
                 </div>
                 <div>
-                    <div style="font-size: 0.9rem;">
+                    <div class="result_img">
+                        <img src="../images/scissor.png" id="computer_move_img">
+                    </div>
+                    <div>
                         COMPUTER MOVE
                     </div>
-                    <div class="result_img">
-                        <img src="images/scissor.png" id="computer_move_img">
-                    </div>
-    
                 </div>
             </div>
             <div class="result_container">
@@ -62,9 +60,8 @@
                 <div class="tie_container"><p id="tie_text">10</p></div>
             </div>
         </div>
-        
     </div>
     <script src="script.js"></script>
+    
 </body>
-
 </html>

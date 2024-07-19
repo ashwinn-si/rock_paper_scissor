@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite CU";
+}
+body{
+    overflow-y: hidden;
+    height: 100vh;
+    background-color: darkgray;
+}
+.header{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+
+.player_selector_box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.single_player_button,.multi_player_button{
+    width:300px;
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 20px;
+}
+.single_player_button{
+    background-color: #FBE7C6;
+}
+.multi_player_button{
+    background-color: #FFAEBC;
+}
