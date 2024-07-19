@@ -14,20 +14,20 @@
 <body>
     <div class="container">
         <div class="head_container">
-            <p class="reset_text" onclick="reset()">RESET</p>
+            <p class="reset_text" id="reset_button">RESET</p>
             <p class="header">STONE PAPER SCISSORS</p>
             <p class="rounds_text">ROUND : <span id="round_count">10</span></p>
         </div>
         
         <div class="move_box" >
-            <div class="img_box" onclick="main('rock')">
+            <div class="img_box" id="rock_button">
                 <img src="../images/rock.png" >
                 
             </div>
-            <div class="img_box" onclick="main('paper')">
+            <div class="img_box" id="paper_button">
                 <img src="../images/paper.png" >
             </div>
-            <div class="img_box" onclick="main('scissor')">
+            <div class="img_box" id="scissor_button">
                 <img src="../images/scissor.png">
             </div>
 

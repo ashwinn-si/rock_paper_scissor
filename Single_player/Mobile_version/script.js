@@ -1,5 +1,12 @@
 let score_card=[0,0,0,0]//win , loss , tie , round_count
 
+//event listeners definition
+
+document.getElementById('rock_button').addEventListener('click',()=>{main('rock')});
+document.getElementById('paper_button').addEventListener('click',()=>{main('paper')});
+document.getElementById('scissor_button').addEventListener('click',()=>{main('scissor')});
+document.getElementById('reset_button').addEventListener('click',()=>{reset()});
+
 //changes the display property of few html elements
 
 function display_property_changer(){

@@ -1,5 +1,31 @@
 let score_card=[0,0,0,0]//win , loss , tie , round_count
 
+//event listeners section
+
+document.getElementById('rock_button').addEventListener('click',()=>{main('rock')});
+document.getElementById('paper_button').addEventListener('click',()=>{main('paper')});
+document.getElementById('scissor_button').addEventListener('click',()=>{main('scissor')});
+document.getElementById('reset_button').addEventListener('click',()=>{reset();});
+
+
+// event listeners for key pressing
+
+document.body.addEventListener('keydown',(event)=>{
+    let key_pressed=event.key;//event contains the alphabet pressed
+    // r - ROCK || p - PAPPER || s - SCISSOR || Shift - RESET 
+    console.log(key_pressed);
+    if(key_pressed==='r'){
+        main('rock');
+    }else if(key_pressed==='p'){
+        main('paper');
+    }else if(key_pressed==='s'){
+        main('scissor');
+    }else if(key_pressed==='Shift'){
+        reset()
+    }
+})
+
+
 //changes the display property of few html elements
 
 function display_property_changer(){
