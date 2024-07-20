@@ -16,7 +16,7 @@
         <div class="head_container">
             <p class="reset_text" id="reset_button">RESET</p>
             <p class="header">STONE PAPER SCISSORS</p>
-            <p class="rounds_text">ROUND : <span id="round_count">10</span></p>
+            <p class="rounds_text">RUN TO <span id="total_round">1</span> POINTS</p>
         </div>
         
         <div class="move_box" >
@@ -39,7 +39,7 @@
                         YOUR MOVE
                     </div>
                     <div class="result_img">
-                        <img src="images/paper.png" id="player_move_image">
+                        <img src="../images/paper.png" id="player_move_image">
                     </div>
                 </div>
                 <div class="curr_result_shower" id="result_text_box">
@@ -50,20 +50,26 @@
                         COMPUTER MOVE
                     </div>
                     <div class="result_img">
-                        <img src="images/scissor.png" id="computer_move_img">
+                        <img src="../images/scissor.png" id="computer_move_img">
                     </div>
     
                 </div>
             </div>
             <div class="result_container">
-                <div ><p>SCORE CARD</p></div>
-                <div class="win_container"><p id="win_text">10</p></div>
-                <div class="loss_container"><p id="loss_text">10</p></div>
-                <div class="tie_container"><p id="tie_text">10</p></div>
+                <div class="player_score_box">
+                    <div><p>Player Score</p></div>
+                    <div class="player_score_inner_box"><p id="player_score">10</p></div>
+                </div>
+                <div class="computer_score_box">
+                    <div class="computer_score_inner_box"><p id="computer_score">10</p></div>
+                    <div><p>Computer Score</p></div>
+                </div>
+                
             </div>
         </div>
         
     </div>
+    
     <script src="script.js"></script>
 </body>
 

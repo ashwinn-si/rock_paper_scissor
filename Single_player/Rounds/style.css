@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Playwrite CU";
+}
+body{
+    overflow-y: hidden;
+    height: 100vh;
+    background-color: darkgray;
+}
+.header{
+    color:white;
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+.sub_head{
+    color: #F9F1F0;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+.rounds_box {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#run-5,#run-11,#run-15,#run-21{
+    width:300px;
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+#run-5{
+    background-color: #FAE8E0;
+}
+#run-11{
+    background-color: #FBE5C8;
+}
+#run-15{
+    background-color: #B6E2D3;
+}
+#run-21{
+    background-color: #8FDDE7;
+}
+@media screen and (max-width: 768px){
+    .sub_head{
+        font-size: 1rem;
+    }
+}

@@ -1,5 +1,8 @@
-let score_card=[0,0,0,0]//win , loss , tie , round_count
+let score_card=[0,0]//player_score , computer_score
 
+//retreving the no of rounds from local storage
+
+let no_rounds_to_be_played=JSON.parse(localStorage.getItem("no_rounds_to_be_played"));
 //event listeners section
 
 document.getElementById('rock_button').addEventListener('click',()=>{main('rock')});
@@ -32,6 +35,7 @@ function display_property_changer(){
     document.querySelector(".reset_text").style.display="block";
     document.querySelector(".rounds_text").style.display="block";
     document.querySelector(".compute_box").style.display = "block";
+    document.getElementById("total_round").innerHTML=no_rounds_to_be_played;
 }
 
 
@@ -85,8 +89,6 @@ function result_updator(result){
         score_card[0]+=1;
     }else if(result==='loss'){
         score_card[1]+=1;
-    }else{
-        score_card[2]+=1;
     }
 }
 
@@ -127,17 +129,12 @@ function image_changer(player_move,computer_move){
 //changes the moves , result values, and many more
 
 function result_displayer(computer_move,player_move,result){
-
-    //changes the round count
-    document.getElementById("round_count").innerHTML=score_card[3];
-
-    let win=document.getElementById("win_text");
-    let loss=document.getElementById("loss_text");
-    let tie=document.getElementById("tie_text");
+    
+    let player_score=document.getElementById("player_score");
+    let computer_score=document.getElementById("computer_score");
     let result_text=document.getElementById("result_text");
-    win.innerHTML=score_card[0];
-    loss.innerHTML=score_card[1];
-    tie.innerHTML=score_card[2];
+    player_score.innerHTML=score_card[0];
+    computer_score.innerHTML=score_card[1];
     result_text.innerHTML=result;
 
     //cahnges the result text box color
@@ -150,17 +147,35 @@ function result_displayer(computer_move,player_move,result){
 
 }
 
+//checks for the score and displays who won and returns to the main screen
+
+function result_checker(){
+    let player_score=score_card[0];
+    let computer_score=score_card[1];
+    if(player_score==no_rounds_to_be_played){
+        localStorage.setItem("winner",JSON.stringify('PLAYER'))
+        window.location.href='../Player_decission/index.html';
+    }else if(computer_score==no_rounds_to_be_played){
+        
+        localStorage.setItem("winner",JSON.stringify('COMPUTER'))
+        window.location.href='../Player_decission/index.html';
+    }else if(player_score==(no_rounds_to_be_played-1) && computer_score==(no_rounds_to_be_played-1)){
+        alert("game point");
+    }
+}
+
 function main(player_move){
-    score_card[3]+=1//round count is incremented
     display_property_changer();
     let computer_move=generate_computer_move();
     let result=result_generator(computer_move,player_move);
     result_updator(result);
     result_displayer(computer_move,player_move,result);
+    result_checker();
     
 }
 function reset(){
-    score_card=[0,0,0,0];
+    score_card=[0,0];
     document.querySelector(".compute_box").style.display = "none";
-    document.getElementById("round_count").innerHTML=score_card[3];
+    
+
 }
