@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Playwrite CU";
+}
+body{
+   
+    background-color: darkgray;
+    
+}
+.header{
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+    color: white;
+}
+.container {
+    position: absolute;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#play_again_button,#change_points_button,#return_main_button{
+    width:300px;
+    padding: 15px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+#play_again_button{
+    background-color: #FAE8E0;
+}
+#change_points_button{
+    background-color: #FBE5C8;
+}
+#return_main_button{
+    background-color: #B6E2D3;
+}

@@ -34,7 +34,7 @@ body{
     border-radius: 20px;
     display: none;
 }
-.header{
+.head_container .header{
     color: white;
     font-weight: bold;
     text-align: center;
@@ -119,28 +119,44 @@ body{
     display: flex;
     text-align: center;
 }
-.result_container div{
+.result_container{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    height: 50px;
-    width: 20%;
+    width: 100%;
     height: 100px;
     font-weight: bold;
 
 }
-.win_container{
+.player_score_box,.computer_score_box{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+.player_score_box div,.computer_score_box div{
+    margin: 0px 20px;
+    text-align: center;
+}
+.player_score_box div p,.computer_score_box div p{
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: black;
+}
+
+.player_score_inner_box {
+    padding: 20px;
     color: white;
     background-color: rgb(0, 255, 34);
     border-radius: 20px;
 }
-.loss_container{
+.computer_score_inner_box{
+    padding: 20px;
     color: white;
     border-radius: 20px;
     background-color: red;
 }
-.tie_container{
-    color: white;
-    border-radius: 20px;
-    background-color: gray;
-}
+
+
+
