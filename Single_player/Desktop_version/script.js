@@ -95,13 +95,15 @@ function result_updator(result){
 
 //function that changes the color of the result text box
 function result_text_box_color_changer(result){
-    let result_text_box=document.getElementById("result_text");
+    let result_text=document.getElementById("result_text");
+    result_text.style.display="block";
+    result_text.innerHTML=result;
     if (result == 'win') {
-        result_text_box.style.backgroundColor = "rgb(0, 255, 34)";
+        result_text.style.backgroundColor = "rgb(0, 255, 34)";
     } else if (result == 'loss') {
-        result_text_box.style.backgroundColor = "red";
+        result_text.style.backgroundColor = "red";
     } else {
-        result_text_box.style.backgroundColor = "gray";
+        result_text.style.backgroundColor = "gray";
     }
 }
 
@@ -134,13 +136,17 @@ function result_displayer(computer_move,player_move,result){
     let player_score=document.getElementById("player_score");
     let computer_score=document.getElementById("computer_score");
     let result_text=document.getElementById("result_text");
-    player_score.innerHTML=score_card[0];
-    computer_score.innerHTML=score_card[1];
-    result_text.innerHTML=result;
 
-    //cahnges the result text box color
+    //changing the result display property to none
 
-    result_text_box_color_changer(result);
+    document.getElementById("result_text").style.display="none";
+    
+    //changes the result text box color and result text || changes the score too
+
+    setTimeout(()=>{result_text_box_color_changer(result);
+        player_score.innerHTML=score_card[0];
+        computer_score.innerHTML=score_card[1];
+    },1000);
 
     //changes the images in player_move and comp_move
 
@@ -155,11 +161,11 @@ function result_checker(){
     let computer_score=score_card[1];
     if(player_score==no_rounds_to_be_played){
         localStorage.setItem("winner",JSON.stringify('PLAYER'))
-        window.location.href='../Player_decission/index.html';
+        setTimeout(()=>{window.location.href='../Player_decission/index.html'},2000);
     }else if(computer_score==no_rounds_to_be_played){
         
         localStorage.setItem("winner",JSON.stringify('COMPUTER'))
-        window.location.href='../Player_decission/index.html';
+        setTimeout(()=>{window.location.href='../Player_decission/index.html'},2000);
     }else if(player_score==(no_rounds_to_be_played-1) && computer_score==(no_rounds_to_be_played-1)){
         alert("game point");
     }
@@ -173,10 +179,4 @@ function main(player_move){
     result_displayer(computer_move,player_move,result);
     result_checker();
     
-}
-function reset(){
-    score_card=[0,0];
-    document.querySelector(".compute_box").style.display = "none";
-    
-
 }
