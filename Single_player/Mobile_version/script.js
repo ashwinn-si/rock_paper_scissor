@@ -1,18 +1,43 @@
-let score_card=[0,0,0,0]//win , loss , tie , round_count
+let score_card=[0,0]//player_score , computer_score
 
-//event listeners definition
+//retreving the no of rounds from local storage
+
+let no_rounds_to_be_played=JSON.parse(localStorage.getItem("no_rounds_to_be_played"));
+//event listeners section
 
 document.getElementById('rock_button').addEventListener('click',()=>{main('rock')});
 document.getElementById('paper_button').addEventListener('click',()=>{main('paper')});
 document.getElementById('scissor_button').addEventListener('click',()=>{main('scissor')});
-document.getElementById('reset_button').addEventListener('click',()=>{reset()});
+document.getElementById('reset_button').addEventListener('click',()=>{reset();});
+
+
+// event listeners for key pressing
+
+document.body.addEventListener('keydown',(event)=>{
+    let key_pressed=event.key;//event contains the alphabet pressed
+    // r - ROCK || p - PAPPER || s - SCISSOR || Shift - RESET 
+    console.log(key_pressed);
+    if(key_pressed==='r'){
+        main('rock');
+    }else if(key_pressed==='p'){
+        main('paper');
+    }else if(key_pressed==='s'){
+        main('scissor');
+    }else if(key_pressed==='Shift'){
+        reset()
+    }
+})
+
 
 //changes the display property of few html elements
 
 function display_property_changer(){
-    document.querySelector(".reset_text").style.display="block";
-    document.querySelector(".rounds_text").style.display="block";
-    document.querySelector(".compute_box").style.display = "block";
+    document.querySelector(".header").style.width="30%";
+    document.querySelector(".compute_box").style.display="block";
+    document.querySelector(".player_score_box").style.display="flex";
+    document.querySelector(".computer_score_box").style.display = "flex";
+    
+    document.querySelector(".make_move_displayer").style.display="none";
 }
 
 
@@ -66,8 +91,6 @@ function result_updator(result){
         score_card[0]+=1;
     }else if(result==='loss'){
         score_card[1]+=1;
-    }else{
-        score_card[2]+=1;
     }
 }
 
@@ -86,21 +109,21 @@ function result_text_box_color_changer(result){
 //changes the images in comp move and player move
 
 function image_changer(player_move,computer_move){
-    let computer_img=document.getElementById("computer_move_img");
-    let player_img=document.getElementById("player_move_image");
+    let computer_img=document.getElementById("computer_move_displayer");
+    let player_img=document.getElementById("player_move_displayer");
     if(computer_move=='rock'){
-        computer_img.src="../images/rock.png";
+        computer_img.src="../../images/stone/stone_right.mp4";
     }else if(computer_move=='paper'){
-        computer_img.src="../images/paper.png";
+        computer_img.src="../../images/paper/paper_right.mp4";
     }else{
-        computer_img.src="../images/scissor.png";
+        computer_img.src="../../images/scissor/scissor_right.mp4";
     }
     if(player_move=='rock'){
-        player_img.src="../images/rock.png";
+        player_img.src="../../images/stone/stone_left.mp4";
     }else if(player_move=='paper'){
-        player_img.src="../images/paper.png";
+        player_img.src="../../images/paper/paper_left.mp4";
     }else{
-        player_img.src="../images/scissor.png";
+        player_img.src="../../images/scissor/scissor_left.mp4";
     }
 }
 
@@ -108,17 +131,12 @@ function image_changer(player_move,computer_move){
 //changes the moves , result values, and many more
 
 function result_displayer(computer_move,player_move,result){
-
-    //changes the round count
-    document.getElementById("round_count").innerHTML=score_card[3];
-
-    let win=document.getElementById("win_text");
-    let loss=document.getElementById("loss_text");
-    let tie=document.getElementById("tie_text");
+    
+    let player_score=document.getElementById("player_score");
+    let computer_score=document.getElementById("computer_score");
     let result_text=document.getElementById("result_text");
-    win.innerHTML=score_card[0];
-    loss.innerHTML=score_card[1];
-    tie.innerHTML=score_card[2];
+    player_score.innerHTML=score_card[0];
+    computer_score.innerHTML=score_card[1];
     result_text.innerHTML=result;
 
     //cahnges the result text box color
@@ -131,17 +149,35 @@ function result_displayer(computer_move,player_move,result){
 
 }
 
+//checks for the score and displays who won and returns to the main screen
+
+function result_checker(){
+    let player_score=score_card[0];
+    let computer_score=score_card[1];
+    if(player_score==no_rounds_to_be_played){
+        localStorage.setItem("winner",JSON.stringify('PLAYER'))
+        window.location.href='../Player_decission/index.html';
+    }else if(computer_score==no_rounds_to_be_played){
+        
+        localStorage.setItem("winner",JSON.stringify('COMPUTER'))
+        window.location.href='../Player_decission/index.html';
+    }else if(player_score==(no_rounds_to_be_played-1) && computer_score==(no_rounds_to_be_played-1)){
+        alert("game point");
+    }
+}
+
 function main(player_move){
-    score_card[3]+=1//round count is incremented
     display_property_changer();
     let computer_move=generate_computer_move();
     let result=result_generator(computer_move,player_move);
     result_updator(result);
     result_displayer(computer_move,player_move,result);
+    result_checker();
     
 }
 function reset(){
-    score_card=[0,0,0,0];
+    score_card=[0,0];
     document.querySelector(".compute_box").style.display = "none";
-    document.getElementById("round_count").innerHTML=score_card[3];
+    
+
 }

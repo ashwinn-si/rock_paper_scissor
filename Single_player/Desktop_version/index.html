@@ -8,66 +8,50 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
         <div class="head_container">
-            <p class="reset_text" id="reset_button">RESET</p>
-            <p class="header">STONE PAPER SCISSORS</p>
-            <p class="rounds_text">RUN TO <span id="total_round">1</span> POINTS</p>
+            <div class="player_score_box">
+                <div><p id="player_score">10</p></div>
+                <p>PLAYER SCORE</p>
+            </div>
+            <p class="header"><span>S</span>TONE <span>P</span>APPER <span> S</span>CISSOR</p>
+            <div class="computer_score_box">
+                <div><p id="computer_score">10</p></div>
+                <p>COMPUTER SCORE</p>
+            </div>
         </div>
-        
-        <div class="move_box" >
+        <p class="make_move_displayer">MAKE YOUR MOVE</p>
+        <div class="compute_box">
+            <div class="player_move_container">
+                <video src="../../images/paper/paper_left.mp4"  id="player_move_displayer" width="100%" autoplay=""></video>  
+            </div>
+            <div class="result_container">
+                <p id="result_text">result</p>
+            </div>
+            <div class="computer_move_container">
+                <video src="../../images/paper/paper_right.mp4" id="computer_move_displayer" width="100%" autoplay=""></video>  
+            </div>
+        </div>
+        <div class="move_box">
             <div class="img_box" id="rock_button">
-                <img src="../images/rock.png" >
+                <img src="../../images/stone/rock.png" >
                 
             </div>
             <div class="img_box" id="paper_button">
-                <img src="../images/paper.png" >
+                <img src="../../images/paper/paper.png" >
             </div>
             <div class="img_box" id="scissor_button">
-                <img src="../images/scissor.png">
+                <img src="../../images/scissor/scissor.png">
             </div>
 
         </div>
-        <div class="compute_box">
-            <div class="moves_result_box">
-                <div>
-                    <div>
-                        YOUR MOVE
-                    </div>
-                    <div class="result_img">
-                        <img src="../images/paper.png" id="player_move_image">
-                    </div>
-                </div>
-                <div class="curr_result_shower" id="result_text_box">
-                    <p id="result_text">result</p>
-                </div>
-                <div>
-                    <div style="font-size: 0.9rem;">
-                        COMPUTER MOVE
-                    </div>
-                    <div class="result_img">
-                        <img src="../images/scissor.png" id="computer_move_img">
-                    </div>
-    
-                </div>
-            </div>
-            <div class="result_container">
-                <div class="player_score_box">
-                    <div><p>Player Score</p></div>
-                    <div class="player_score_inner_box"><p id="player_score">10</p></div>
-                </div>
-                <div class="computer_score_box">
-                    <div class="computer_score_inner_box"><p id="computer_score">10</p></div>
-                    <div><p>Computer Score</p></div>
-                </div>
-                
-            </div>
-        </div>
-        
     </div>
     
     <script src="script.js"></script>

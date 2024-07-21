@@ -1,8 +1,6 @@
-const screenWidth = window.innerWidth;
-console.log(screenWidth);
-function single_player(){
+document.querySelector(".single_player_button").addEventListener('click',()=>{
     window.location.href="Single_player/Rounds/index.html";
-}
-function multi_player(){
-    alert("WILL BE CREATED SOON....!")
-}
+})
+document.querySelector(".multi_player_button").addEventListener('click',()=>{
+    alert("WILL BE CREATED SOON....!");
+})

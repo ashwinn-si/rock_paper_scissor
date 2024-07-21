@@ -1,67 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ROCK PAPER SCISSORS</title>
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <div class="container">
         <div class="head_container">
-            <p class="reset_text" id="reset_button">RESET</p>
-            <p class="header">STONE PAPER SCISSORS</p>
-            <p class="rounds_text">ROUND<br><span id="round_count">1</span></p>
+            <div class="player_score_box">
+                <div><p id="player_score">10</p></div>
+                <p>PLAYER SCORE</p>
+            </div>
+            <p class="header"><span>S</span>TONE <span>P</span>APPER <span> S</span>CISSOR</p>
+            <div class="computer_score_box">
+                <div><p id="computer_score">10</p></div>
+                <p>COMPUTER<br> SCORE</p>
+            </div>
         </div>
-        <div class="move_box_1" >
+        <p class="make_move_displayer">MAKE YOUR MOVE</p>
+        <div class="compute_box">
+            <div class="player_move_container">
+                <video src="../../images/paper/paper_left.mp4"  id="player_move_displayer" width="100%" autoplay=""></video>  
+            </div>
+            <div class="result_container">
+                <p id="result_text">result</p>
+            </div>
+            <div class="computer_move_container">
+                <video src="../../images/paper/paper_right.mp4" id="computer_move_displayer" width="100%" autoplay=""></video>  
+            </div>
+        </div>
+        <div class="move_box">
             <div class="img_box" id="rock_button">
-                <img src="../images/rock.png" >
+                <img src="../../images/stone/rock.png" >
                 
             </div>
             <div class="img_box" id="paper_button">
-                <img src="../images/paper.png" >
+                <img src="../../images/paper/paper.png" >
             </div>
-        </div>
-        <div class="move_box_2">
             <div class="img_box" id="scissor_button">
-                <img src="../images/scissor.png">
+                <img src="../../images/scissor/scissor.png">
             </div>
-        </div>
-        <div class="compute_box">
-            <div class="moves_result_box">
-                <div>
-                    
-                    <div class="result_img">
-                        <img src="../images/rock.png" id="player_move_image">
-                    </div>
-                    <div>
-                        YOUR MOVE
-                    </div>
-                </div>
-                <div class="curr_result_shower" id="result_text_box">
-                    <p id="result_text">result</p>
-                </div>
-                <div>
-                    <div class="result_img">
-                        <img src="../images/scissor.png" id="computer_move_img">
-                    </div>
-                    <div>
-                        COMPUTER MOVE
-                    </div>
-                </div>
-            </div>
-            <div class="result_container">
-                <div ><p>SCORE CARD</p></div>
-                <div class="win_container"><p id="win_text">10</p></div>
-                <div class="loss_container"><p id="loss_text">10</p></div>
-                <div class="tie_container"><p id="tie_text">10</p></div>
-            </div>
+
         </div>
     </div>
-    <script src="script.js"></script>
     
+    <script src="script.js"></script>
 </body>
+
 </html>

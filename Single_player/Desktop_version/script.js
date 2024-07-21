@@ -32,10 +32,12 @@ document.body.addEventListener('keydown',(event)=>{
 //changes the display property of few html elements
 
 function display_property_changer(){
-    document.querySelector(".reset_text").style.display="block";
-    document.querySelector(".rounds_text").style.display="block";
-    document.querySelector(".compute_box").style.display = "block";
-    document.getElementById("total_round").innerHTML=no_rounds_to_be_played;
+    document.querySelector(".header").style.width="30%";
+    document.querySelector(".compute_box").style.display="flex";
+    document.querySelector(".player_score_box").style.display="flex";
+    document.querySelector(".computer_score_box").style.display = "flex";
+    
+    document.querySelector(".make_move_displayer").style.display="none";
 }
 
 
@@ -107,21 +109,21 @@ function result_text_box_color_changer(result){
 //changes the images in comp move and player move
 
 function image_changer(player_move,computer_move){
-    let computer_img=document.getElementById("computer_move_img");
-    let player_img=document.getElementById("player_move_image");
+    let computer_img=document.getElementById("computer_move_displayer");
+    let player_img=document.getElementById("player_move_displayer");
     if(computer_move=='rock'){
-        computer_img.src="../images/rock.png";
+        computer_img.src="../../images/stone/stone_right.mp4";
     }else if(computer_move=='paper'){
-        computer_img.src="../images/paper.png";
+        computer_img.src="../../images/paper/paper_right.mp4";
     }else{
-        computer_img.src="../images/scissor.png";
+        computer_img.src="../../images/scissor/scissor_right.mp4";
     }
     if(player_move=='rock'){
-        player_img.src="../images/rock.png";
+        player_img.src="../../images/stone/stone_left.mp4";
     }else if(player_move=='paper'){
-        player_img.src="../images/paper.png";
+        player_img.src="../../images/paper/paper_left.mp4";
     }else{
-        player_img.src="../images/scissor.png";
+        player_img.src="../../images/scissor/scissor_left.mp4";
     }
 }
 
