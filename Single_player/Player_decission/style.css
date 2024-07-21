@@ -8,14 +8,19 @@
 }
 body{
    
-    background-color: darkgray;
+    background-color: #4285f4;
     
 }
 .header{
+    font-size: 1.5rem;
     text-align: center;
     margin: 20px 0;
     font-weight: bold;
-    color: white;
+    color: #673ab7;
+}
+#winner_result{
+    font-size: 1.6rem;
+    color: #fbbc05;
 }
 .container {
     position: absolute;
