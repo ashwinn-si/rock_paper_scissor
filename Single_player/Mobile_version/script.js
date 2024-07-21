@@ -15,7 +15,7 @@ document.getElementById('reset_button').addEventListener('click',()=>{reset();})
 //changes the display property of few html elements
 
 function display_property_changer(){
-    document.querySelector(".header").style.width="30%";
+    document.querySelector(".header").style.width="45%";
     document.querySelector(".compute_box").style.display="block";
     document.querySelector(".player_score_box").style.display="flex";
     document.querySelector(".computer_score_box").style.display = "flex";
