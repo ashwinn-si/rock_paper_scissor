@@ -36,7 +36,6 @@ function display_property_changer(){
     document.querySelector(".compute_box").style.display="flex";
     document.querySelector(".player_score_box").style.display="flex";
     document.querySelector(".computer_score_box").style.display = "flex";
-    
     document.querySelector(".make_move_displayer").style.display="none";
 }
 
@@ -112,18 +111,18 @@ function image_changer(player_move,computer_move){
     let computer_img=document.getElementById("computer_move_displayer");
     let player_img=document.getElementById("player_move_displayer");
     if(computer_move=='rock'){
-        computer_img.src="../../images/stone/stone_right.mp4";
+        computer_img.src="../../images/stone/stone_right.gif";
     }else if(computer_move=='paper'){
-        computer_img.src="../../images/paper/paper_right.mp4";
+        computer_img.src="../../images/paper/paper_right.gif";
     }else{
-        computer_img.src="../../images/scissor/scissor_right.mp4";
+        computer_img.src="../../images/scissor/scissor_right.gif";
     }
     if(player_move=='rock'){
-        player_img.src="../../images/stone/stone_left.mp4";
+        player_img.src="../../images/stone/stone_left.gif";
     }else if(player_move=='paper'){
-        player_img.src="../../images/paper/paper_left.mp4";
+        player_img.src="../../images/paper/paper_left.gif";
     }else{
-        player_img.src="../../images/scissor/scissor_left.mp4";
+        player_img.src="../../images/scissor/scissor_left.gif";
     }
 }
 

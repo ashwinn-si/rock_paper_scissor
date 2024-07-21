@@ -11,7 +11,7 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
     height: 100%;
-    background-color: darkgray;
+    background-color: rgba(8, 74, 44, 0.651);
 }
 .container{
     height: 100%;
@@ -45,9 +45,7 @@ body{
 }
 .player_score_box,.computer_score_box{
     margin: 10px 15px;
-    
     flex-direction: column;
-    float: left;
     justify-content: center;
     align-items: center;
     display: none;

@@ -21,6 +21,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px 0;
 }
 
 .header{
@@ -42,7 +43,6 @@ body{
 }
 .player_score_box,.computer_score_box{
     margin: 10px 15px;
-    width: 20%;
     flex-direction: column;
     float: left;
     justify-content: center;
@@ -96,10 +96,11 @@ body{
     border-radius: 30px;
 }
 
-.player_move_container,.computer_move_container{
+.player_move_container img,.computer_move_container img{
+    width: 220px;
     margin: 10px 0px;
 }
-.computer_move_container video{
+.computer_move_container img{
     float:right;
 }
 .move_box{

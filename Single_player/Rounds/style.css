@@ -2,7 +2,8 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Playwrite CU";
+    font-family: "Open Sans";
+    font-style: italic;
 }
 body{
     overflow-y: hidden;
@@ -12,7 +13,7 @@ body{
 .header{
     color:white;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 10px 0px;
     font-weight: bold;
 }
@@ -25,7 +26,7 @@ body{
 }
 .rounds_box {
     position: absolute;
-    top: 52%;
+    top: 56%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: flex;
@@ -40,6 +41,7 @@ body{
     border: none;
     border-radius: 20px;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 #run-5{
     background-color: #FAE8E0;
@@ -53,8 +55,13 @@ body{
 #run-21{
     background-color: #8FDDE7;
 }
+span{
+    font-family: "Playwrite CU";
+    font-size: 2.5rem;
+}
 @media screen and (max-width: 768px){
     .sub_head{
-        font-size: 1rem;
+        font-size: 1.3rem;
+        margin:20px 0px;
     }
 }

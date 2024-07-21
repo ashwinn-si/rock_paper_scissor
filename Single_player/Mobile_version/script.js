@@ -11,23 +11,6 @@ document.getElementById('scissor_button').addEventListener('click',()=>{main('sc
 document.getElementById('reset_button').addEventListener('click',()=>{reset();});
 
 
-// event listeners for key pressing
-
-document.body.addEventListener('keydown',(event)=>{
-    let key_pressed=event.key;//event contains the alphabet pressed
-    // r - ROCK || p - PAPPER || s - SCISSOR || Shift - RESET 
-    console.log(key_pressed);
-    if(key_pressed==='r'){
-        main('rock');
-    }else if(key_pressed==='p'){
-        main('paper');
-    }else if(key_pressed==='s'){
-        main('scissor');
-    }else if(key_pressed==='Shift'){
-        reset()
-    }
-})
-
 
 //changes the display property of few html elements
 
@@ -112,18 +95,18 @@ function image_changer(player_move,computer_move){
     let computer_img=document.getElementById("computer_move_displayer");
     let player_img=document.getElementById("player_move_displayer");
     if(computer_move=='rock'){
-        computer_img.src="../../images/stone/stone_right.mp4";
+        computer_img.src="../../images/stone/stone_right.gif";
     }else if(computer_move=='paper'){
-        computer_img.src="../../images/paper/paper_right.mp4";
+        computer_img.src="../../images/paper/paper_right.gif";
     }else{
-        computer_img.src="../../images/scissor/scissor_right.mp4";
+        computer_img.src="../../images/scissor/scissor_right.gif";
     }
     if(player_move=='rock'){
-        player_img.src="../../images/stone/stone_left.mp4";
+        player_img.src="../../images/stone/stone_left.gif";
     }else if(player_move=='paper'){
-        player_img.src="../../images/paper/paper_left.mp4";
+        player_img.src="../../images/paper/paper_left.gif";
     }else{
-        player_img.src="../../images/scissor/scissor_left.mp4";
+        player_img.src="../../images/scissor/scissor_left.gif";
     }
 }
 
