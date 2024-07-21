@@ -99,11 +99,11 @@ function result_text_box_color_changer(result){
     result_text.style.display="block";
     result_text.innerHTML=result;
     if (result == 'win') {
-        result_text.style.backgroundColor = "rgb(255, 8, 0)";
+        result_text.style.backgroundColor = "#39FF14";
     } else if (result == 'loss') {
-        result_text.style.backgroundColor = "red";
+        result_text.style.backgroundColor = "#ff073a";
     } else {
-        result_text.style.backgroundColor = "#673ab7";
+        result_text.style.backgroundColor = "#BF40BF";
     }
 }
 
