@@ -7,10 +7,10 @@
 body{
     overflow-y: hidden;
     height: 100vh;
-    background-color: darkgray;
+    background-color: 	#4285f4;
 }
 .header{
-    color:white;
+    color:	#fbbc05;
     text-align: center;
     font-size: 2rem;
     margin: 10px 0px;

@@ -84,11 +84,11 @@ function result_text_box_color_changer(result){
     result_text.style.display="block";
     result_text.innerHTML=result;
     if (result == 'win') {
-        result_text.style.backgroundColor = "rgb(0, 255, 34)";
+        result_text.style.backgroundColor = "rgb(255, 8, 0)";
     } else if (result == 'loss') {
         result_text.style.backgroundColor = "red";
     } else {
-        result_text.style.backgroundColor = "gray";
+        result_text.style.backgroundColor = "#673ab7";
     }
 }
 

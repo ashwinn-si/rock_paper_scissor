@@ -11,7 +11,7 @@ body{
     overflow-x: hidden;
     overflow-y: hidden;
     height: 100%;
-    background-color: rgba(8, 74, 44, 0.651);
+    background-color: #4285f4;
 }
 .container{
     height: 100%;
@@ -30,7 +30,7 @@ body{
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
-    color: white;
+    color: #fbbc05;
 }
 .header span{
     font-family: "Playwrite CU";
@@ -40,7 +40,7 @@ body{
     width: 100%;
     text-align: center;
     font-size: 1.5rem;
-    color: white;
+    color: #673ab7;
     margin: 20px 20px;
 }
 .player_score_box,.computer_score_box{
@@ -55,7 +55,7 @@ body{
     text-align: center;
     padding: 20px;
     color: white;
-    background-color: rgba(0, 255, 34, 0.822);
+    background-color: 	#34a853;
     border-radius: 20px;
     margin: 10px 0px;
 }
@@ -65,7 +65,7 @@ body{
     padding: 20px;
     color: white;
     border-radius: 20px;
-    background-color: tomato;
+    background-color: #ea4335;
     margin: 10px 0px;
 }
 .compute_box{

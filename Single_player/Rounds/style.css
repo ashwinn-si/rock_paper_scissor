@@ -8,17 +8,17 @@
 body{
     overflow-y: hidden;
     height: 100vh;
-    background-color: darkgray;
+    background-color: #4285f4;
 }
 .header{
-    color:white;
+    color:#fbbc05;
     text-align: center;
     font-size: 2rem;
     margin: 10px 0px;
     font-weight: bold;
 }
 .sub_head{
-    color: #F9F1F0;
+    color: #ffffff;
     text-align: center;
     font-size: 1.3rem;
     margin: 10px 0px;
@@ -63,5 +63,8 @@ span{
     .sub_head{
         font-size: 1.3rem;
         margin:20px 0px;
+    }
+    .rounds_box{
+        top:65%;
     }
 }
