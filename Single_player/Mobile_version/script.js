@@ -81,7 +81,7 @@ function result_updator(result){
 
 function result_text_box_color_changer(result){
     let result_text=document.getElementById("result_text");
-    result_text.style.display="block";
+    result_text.style.visibility="visible";
     result_text.innerHTML=result;
     if (result == 'win') {
         result_text.style.backgroundColor = "#39FF14";
@@ -124,7 +124,7 @@ function result_displayer(computer_move,player_move,result){
 
     //changing the result display property to none
 
-    document.getElementById("result_text").style.display="none";
+    document.getElementById("result_text").style.visibility="hidden";
     
     //changes the result text box color and result text || changes the score too
 

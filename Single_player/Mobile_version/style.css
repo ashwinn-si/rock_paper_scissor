@@ -93,6 +93,7 @@ body{
     background-color: black;
     padding: 2% 0;
     border-radius: 30px;
+    visibility: hidden;
 }
 
 .player_move_container img,.computer_move_container img{
