@@ -25,7 +25,7 @@ body{
 .container_2{
     position: absolute;
     transform: translate(-50%,50%);
-    top:10%;
+    top:1%;
     left:50%;
 }
 .container_2 p{
