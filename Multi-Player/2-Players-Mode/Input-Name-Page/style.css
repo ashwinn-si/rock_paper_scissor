@@ -1,0 +1,23 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    font-style: italic;
+}
+body{
+    overflow-y: hidden;
+    height: 100vh;
+    background-color: #4285f4;
+}
+.header{
+    color:#fbbc05;
+    text-align: center;
+    font-size: 2rem;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+span{
+    font-family: "Playwrite CU";
+    font-size: 2.5rem;
+}
