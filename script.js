@@ -1,5 +1,5 @@
 document.querySelector(".single_player_button").addEventListener('click',()=>{
-    window.location.href="Single_player/Rounds/index.html";
+    window.location.href="Single-player/Rounds/index.html";
 })
 document.querySelector(".multi_player_button").addEventListener('click',()=>{
     alert("WILL BE CREATED SOON....!");
