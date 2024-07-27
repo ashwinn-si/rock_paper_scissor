@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    font-style: italic;
+}
+body{
+    overflow-y: hidden;
+    height: 100vh;
+    background-color: #4285f4;
+}
+.header{
+    color:#fbbc05;
+    text-align: center;
+    font-size: 2rem;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+.sub_head{
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.3rem;
+    margin: 10px 0px;
+    font-weight: bold;
+}
+.rounds_box {
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#run-5,#run-11,#run-15,#run-21{
+    width:300px;
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+#run-5{
+    background-color: #FAE8E0;
+}
+#run-11{
+    background-color: #FBE5C8;
+}
+#run-15{
+    background-color: #B6E2D3;
+}
+#run-21{
+    background-color: #8FDDE7;
+}
+span{
+    font-family: "Playwrite CU";
+    font-size: 2.5rem;
+}
+@media screen and (max-width: 768px){
+    .sub_head{
+        font-size: 1.3rem;
+        margin:20px 0px;
+    }
+    .rounds_box{
+        top:65%;
+    }
+}

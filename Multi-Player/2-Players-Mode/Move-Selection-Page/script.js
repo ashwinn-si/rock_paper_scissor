@@ -55,10 +55,18 @@ function move_storage_local(){
 }   
 
 
+//function that renders the next page
+
+function render_next_page(){
+    window.location.href="../Moves-Display-Page/index.html";
+}
+
+
 function main(curr_move,player_index){
     move_storing_array(curr_move)
     name_changer()
     if(player_index==2){
         move_storage_local();
+        render_next_page();
     }
 }
