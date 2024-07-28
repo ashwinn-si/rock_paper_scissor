@@ -26,10 +26,11 @@ function getting_player_name(){
 }
 
 
-//function that stores the name in local storage
+//function that stores the name in local storage || stroing the default score as zero
 
 function storing_names(names){
     localStorage.setItem("player_names",JSON.stringify(names));
+    localStorage.setItem("score_card",JSON.stringify([0,0]));
 }
 
 function main(){

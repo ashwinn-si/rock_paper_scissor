@@ -12,7 +12,13 @@ let players_moves=[];
 let player_index=0
 
 
-//Cames the names span to player-1 name
+//adding event listener to open the score card page
+document.getElementById("score-button").addEventListener('click',()=>{
+    window.location.href="../../Score-Page/2-Player-Score/index.html";
+})
+
+
+//Changes the names span to player-1 name
 
 document.querySelector(".name").innerHTML=player_names[0];
 

@@ -1,11 +1,11 @@
 //round la tha check panuthu atha score ku matanum kuda
 
-//retriving the players-moves form local storage ||  no-total-rounds to be playes || current round count || players name
+//retriving the players-moves form local storage ||  no-total-rounds to be playes || current round count || players name || player score card
 
 let player_moves=JSON.parse(localStorage.getItem("player_moves"));
-let total_round_count=JSON.parse(localStorage.getItem("no_rounds_to_be_played"));
-let curr_round_count=JSON.parse(localStorage.getItem("curr_round_count"));
-let players_name=JSON.parse(localStorage.getItem("player_names"))
+let total_point_count=JSON.parse(localStorage.getItem("no_rounds_to_be_played"));
+let players_name=JSON.parse(localStorage.getItem("player_names"));
+let player_score=JSON.parse(localStorage.getItem("score_card"));
 main()//calling the main function
 
 
@@ -64,6 +64,16 @@ function result_generator(player_1_move,player_2_move){
 }
 
 
+//function that updates the score card
+
+function score_card_updator(result){
+    if(result=='player_1_win'){
+        player_score[0]+=1;
+    }else if(result=="player_2_win"){
+        player_score[1]+=1;
+    }
+}
+
 //function that changes the result text
 
 function result_text_box_color_changer(result){
@@ -84,28 +94,37 @@ function result_text_box_color_changer(result){
 //function that checks the curr rounds and total round count
 
 function rounds_checker(){
-    if(curr_round_count==total_round_count){
+    if(player_score[0]==total_point_count || player_score[1]==total_point_count){
         alert("game done");
-    }else{
-        curr_round_count+=1;
-        //stores the curr_round count in local storage
-        localStorage.setItem("curr_round_count",JSON.stringify(curr_round_count));
-        //rendering again the moves selection page
-        window.location.href="../Move-Selection-Page/index.html";
     }
 }
+
+
+//function that stores the score card
+
+function score_card_storage(){
+    localStorage.setItem("score_card",JSON.stringify(player_score));
+}
+
+
+//event listner that takes to the moves page
+document.getElementById("next_round_button").addEventListener("click",() =>{
+    window.location.href="../Move-Selection-Page/index.html";
+})
 function main(){
     name_changer();
     image_changer(player_moves[0],player_moves[1]);
     let result=result_generator(player_moves[0],player_moves[1]);
-
+    score_card_updator(result);
     //changes the result text box color and result text
     setTimeout(()=>{
         result_text_box_color_changer(result);
     },1000);
-
+    score_card_storage()
     //checking for the rounds
     setTimeout(()=>{
         rounds_checker();
-    },5000);
+    },3000);
+
+    
 }

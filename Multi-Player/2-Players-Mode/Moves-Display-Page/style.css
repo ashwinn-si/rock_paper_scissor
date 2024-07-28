@@ -63,3 +63,15 @@ body{
     color: lightgreen;
     font-size: 1.7rem;
 }
+.next-round-button{
+    position: absolute;
+    transform: translate(-50%,50%);
+    top:70%;
+    left:50%;
+    color:white ;
+    background-color: gold;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.4rem;
+}

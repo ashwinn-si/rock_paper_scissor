@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-style: italic;
+}
+body{
+    overflow-y: hidden;
+    height: 100vh;
+    background-color: 	#4285f4;
+    position: relative;
+}
+.header{
+    color:	#fbbc05;
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 10px 0px;
+    font-weight: bold;
+    font-style: italic;
+}
+.header span{
+    font-family: "Playwrite CU";
+    font-size: 2.8rem;
+    color: white;
+}
+.sub_hed{
+    font-size: 2rem;
+    text-align: center;
+    color: gold;
+}
+#win_score{
+    color: white;
+}
+.container-2{
+    position: absolute;
+    transform: translate(-50%,50%);
+    top:15%;
+    left:50%;
+}
+.player-1-score-box,.player-2-score-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px;
+}
+.player-1-score-box p,.player-2-score-box p{
+   
+    padding: 20px 40px;
+    margin: 0px 10px;
+    border-radius: 20px;
+    font-size: 1.3rem;
+
+}
+.player-1-score-box p{
+    background-color: tomato;
+}
+.player-2-score-box p{
+    background-color: lightgreen;
+}
+#player_1_name,#player_2_name{
+    width: 180px;
+}
+#player_1_score,#player_2_score{
+    color: white;
+    font-style: normal;
+}
+.close_button{
+    position: absolute;
+    transform: translate(-50%,50%);
+    top:70%;
+    left:50%;
+    color:white ;
+    background-color: #673ab7;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.4rem;
+}
+
+@media(max-width:768px){
+    .player-1-score-box p,.player-2-score-box p{
+        font-size: 1rem;
+        margin: 0px 10px;
+    }
+    .player-1-score-box,.player-2-score-box{
+        margin: 30px 0px;
+    }
+}

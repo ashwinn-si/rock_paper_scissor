@@ -47,6 +47,18 @@ body{
     object-fit: cover;
     object-position: center;
 }
+.score_card_button{
+    position: absolute;
+    transform: translate(-50%,50%);
+    top:70%;
+    left:50%;
+    color:white ;
+    background-color: #673ab7;
+    padding: 15px 60px;
+    border: none;
+    border-radius: 20px;
+    font-size: 1.4rem;
+}
 
 @media(min-width:768px){
     .img_box{
@@ -67,5 +79,9 @@ body{
     }
     .img_box img{
         height: 120px;
+    }
+    .score_card_button{
+        font-size: 0.8rem;
+        top:84%;
     }
 }

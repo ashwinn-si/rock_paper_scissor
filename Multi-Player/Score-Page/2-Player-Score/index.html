@@ -3,33 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOVE SELECT</title>
-    <link rel="stylesheet" href="style.css">
+    <title>SCORE CARD</title>
+    <link href="style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap" rel="stylesheet">
-    <link rel="icon" href="../../images/web_icon.png">
+    <link rel="icon" href="images/web_icon.png">
 </head>
 <body>
     <div class="container">
-        <p class="header">SELECT YOUR MOVE <span class="name">PLAYER</span></p>
-        <div class="move_box">
-            <div class="img_box" id="rock_button">
-                <img src="../../../images/stone/rock.png" >
-                
+        <p class="header"><span>S</span>CORE <span>C</span>ARD</p>
+        <p class="sub_hed">POINTS TO WIN <span id="win_score">5</span></p>
+        <div class="container-2">
+            <div class="player-1-score-box">
+                <p id="player_1_name"></p>
+                <P id="player_1_score"></p>
             </div>
-            <div class="img_box" id="paper_button">
-                <img src="../../../images/paper/paper.png" >
+            <div class="player-2-score-box">
+                <p id="player_2_name"></p>
+                <p id="player_2_score"></p>
             </div>
-            <div class="img_box" id="scissor_button">
-                <img src="../../../images/scissor/scissor.png">
-            </div>
+            
         </div>
-        <button class="score_card_button" id="score-button">SCORE CARD</button>
+        <button class="close_button" id="close-button">CLOSE</button>
     </div>
-    <script src="script.js"> </script>
+    <script src="script.js"></script>
+
+    
 </body>
 </html>
