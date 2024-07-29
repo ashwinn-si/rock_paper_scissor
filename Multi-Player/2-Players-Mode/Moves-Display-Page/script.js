@@ -9,11 +9,16 @@ let player_score=JSON.parse(localStorage.getItem("score_card"));
 main()//calling the main function
 
 
-//function that changes the name of the player
+//function that changes the name of the player || changes the player score
 function name_changer(){
     document.getElementById("player_1_name").innerHTML=players_name[0];
     document.getElementById("player_2_name").innerHTML=players_name[1];
+    document.getElementById("player_1_name_copy").innerHTML=players_name[0];
+    document.getElementById("player_2_name_copy").innerHTML=players_name[1];
+    document.getElementById("player_1_score").innerHTML=player_score[0];
+    document.getElementById("player_2_score").innerHTML=player_score[1];
 }
+
 //function that changes the images 
 function image_changer(player_1_move,player_2_move){
     let player_1_img=document.getElementById("player_1_displayer");
@@ -64,7 +69,7 @@ function result_generator(player_1_move,player_2_move){
 }
 
 
-//function that updates the score card
+//function that updates the score card 
 
 function score_card_updator(result){
     if(result=='player_1_win'){
@@ -72,6 +77,7 @@ function score_card_updator(result){
     }else if(result=="player_2_win"){
         player_score[1]+=1;
     }
+    
 }
 
 //function that changes the result text
@@ -90,12 +96,25 @@ function result_text_box_color_changer(result){
     }
 }
 
+//function that updates the score in the score displayer
+
+function score_display_changer(){
+    document.getElementById("player_1_score").innerHTML=player_score[0];
+    document.getElementById("player_2_score").innerHTML=player_score[1];
+}
 
 //function that checks the curr rounds and total round count
 
 function rounds_checker(){
-    if(player_score[0]==total_point_count || player_score[1]==total_point_count){
-        alert("game done");
+    if(player_score[0]==total_point_count){
+        //storing the name of the winner in local storage
+        localStorage.setItem("game_winner",JSON.stringify(players_name[0]));
+        window.location.href="../../Result-Page/index.html";
+        
+    }else if(player_score[1]==total_point_count){
+        //storing the name of the winner in local storage
+        localStorage.setItem("game_winner",JSON.stringify(players_name[1]));
+        window.location.href="../../Result-Page/index.html";
     }
 }
 
@@ -119,12 +138,14 @@ function main(){
     //changes the result text box color and result text
     setTimeout(()=>{
         result_text_box_color_changer(result);
+        score_display_changer();
     },1000);
     score_card_storage()
     //checking for the rounds
     setTimeout(()=>{
         rounds_checker();
-    },3000);
+            
+    },1010);
 
     
 }
