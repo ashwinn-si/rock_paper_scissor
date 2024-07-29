@@ -1,62 +1,59 @@
+
 *{
-    padding: 0;
     margin: 0;
+    padding:0;
     box-sizing: border-box;
     font-family: "Open Sans";
     font-style: italic;
     font-weight: bold;
 }
 body{
+    overflow-x: hidden;
     overflow-y: hidden;
-    height: 100vh;
+    height: 100%;
     background-color: #4285f4;
 }
+.container{
+    height: 100%;
+}
 .head_container{
-    
     height: 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 10px 0;
 }
-.head_container div{
-    width: 33%;
-}
+
 .header{
-    color:	white;
+    width: 100%;
     text-align: center;
-    font-size: 1.5rem;
-    margin: 10px 0px;
-    font-weight: bold;
-    font-style: italic;
+    font-size: 1rem;
+    color: #fbbc05;
 }
 .header span{
     font-family: "Playwrite CU";
-    font-size: 2rem; 
-    color: #fbbc05;   
+    font-size: 1rem;
 }
-.player_score_box,.computer_score_box{
+.player_1_score_box,.player_2_score_box{
     margin: 10px 15px;
     flex-direction: column;
+    float: left;
     justify-content: center;
     align-items: center;
     display: flex;
-    
+    font-style: normal;
+    font-size: 0.5rem;
+    width: 10%;
 }
-.player_score_box div{
-    width: 19%;
+.player_1_score_box div{
     text-align: center;
     padding: 20px;
     color: white;
-    background-color: 	tomato;
+    background-color: tomato;
     border-radius: 20px;
     margin: 10px 0px;
 }
-#player_1_name_copy,#player_2_name_copy{
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-.computer_score_box div{
-    width: 19%;
+.player_2_score_box div{
     text-align: center;
     padding: 20px;
     color: white;
@@ -64,17 +61,31 @@ body{
     background-color: lightgreen;
     margin: 10px 0px;
 }
+
 .compute_box{
     width: 100%;
-    height: 60%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+    display: block;
 }
 .compute_box div{
-    height: 60%;
-    width: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#player_2_displayer,#player_1_displayer{
+    width: 80%;
+    height:220px;
+}
+.player_1_container p{
+    color: tomato;
+    font-size: 1.7rem;
+}
+.player_2_container p{
+    color: lightgreen;
+    font-size: 1.7rem;
+    
+}
+.result_container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,29 +99,14 @@ body{
     padding: 2% 0;
     border-radius: 30px;
 }
-
-.player_1_container,.player_2_container{
-    margin: 100px 10px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-direction: column;
-}
-.player_1_container p{
-    color: tomato;
-    font-size: 1.7rem;
-}
-.player_2_container p{
-    color: lightgreen;
-    font-size: 1.7rem;
-}
 .next-round-button{
     position: absolute;
     transform: translate(-50%,50%);
-    top:70%;
+    top:85%;
     left:50%;
     color:white ;
     background-color: gold;
-    padding: 15px 60px;
+    padding: 7px 20px;
     border: none;
     border-radius: 20px;
     font-size: 1.4rem;

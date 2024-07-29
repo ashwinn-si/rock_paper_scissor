@@ -24,18 +24,18 @@ function image_changer(player_1_move,player_2_move){
     let player_1_img=document.getElementById("player_1_displayer");
     let player_2_img=document.getElementById("player_2_displayer");
     if(player_2_move=='rock'){
-        player_2_img.src="../../../images/stone/stone_right.gif";
+        player_2_img.src="../../../../images/stone/stone_right.gif";
     }else if(player_2_move=='paper'){
-        player_2_img.src="../../../images/paper/paper_right.gif";
+        player_2_img.src="../../../../images/paper/paper_right.gif";
     }else{
-        player_2_img.src="../../../images/scissor/scissor_right.gif";
+        player_2_img.src="../../../../images/scissor/scissor_right.gif";
     }
     if(player_1_move=='rock'){
-        player_1_img.src="../../../images/stone/stone_left.gif";
+        player_1_img.src="../../../../images/stone/stone_left.gif";
     }else if(player_1_move=='paper'){
-        player_1_img.src="../../../images/paper/paper_left.gif";
+        player_1_img.src="../../../../images/paper/paper_left.gif";
     }else{
-        player_1_img.src="../../../images/scissor/scissor_left.gif";
+        player_1_img.src="../../../../images/scissor/scissor_left.gif";
     }
 }
 
