@@ -21,6 +21,7 @@ body{
 .header span{
     font-family: "Playwrite CU";
     font-size: 2.5rem;
+    color: white;
 }
 .container_2{
     position: absolute;
@@ -70,15 +71,20 @@ body{
     color: white;
     margin: 10px 0px;
 }
+
 @media (min-width: 768px){
     .submit-button:hover{
         background-color: #fbbc05;
         font-weight: bold;
-        padding: 5px 30px;
+        padding: 10px 40px;
     }
     .submit-button{
         background-color: transparent;
         transition: all 0.5s;
+    }
+    .container_2 input:hover{
+        padding: 20px;
+        background-color: #fbbc05;
     }
 }
 @media (max-width: 768px){

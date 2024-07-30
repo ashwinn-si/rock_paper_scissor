@@ -17,8 +17,9 @@ body{
     margin: 10px 0px;
     font-weight: bold;
 }
+
 .sub_head{
-    color: #ffffff;
+    color: #673ab7;
     text-align: center;
     font-size: 1.3rem;
     margin: 10px 0px;
@@ -58,6 +59,36 @@ body{
 span{
     font-family: "Playwrite CU";
     font-size: 2.5rem;
+    color: white;
+}
+@media(min-width:768px){
+    #run-5,#run-11,#run-15,#run-21{
+        border:solid;
+        background-color: transparent;
+        color: black;
+        transition: all 1s;
+        cursor: pointer;
+    }
+    #run-5:hover,#run-11:hover,#run-15:hover,#run-21:hover{
+        transform: scale(1.1);
+    }
+    #run-5:hover{
+        background-color: #FAE8E0;
+        color: white;
+    }
+    #run-11:hover{
+        background-color: #FBE5C8;
+        color: white;
+    }
+    #run-15:hover{
+        background-color: #B6E2D3;
+        color: white;
+    }
+    #run-21:hover{
+        background-color: #8FDDE7;
+        color: white;
+    }
+    
 }
 @media screen and (max-width: 768px){
     .sub_head{

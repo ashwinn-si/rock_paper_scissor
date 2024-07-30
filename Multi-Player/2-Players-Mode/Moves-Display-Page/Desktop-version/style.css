@@ -28,11 +28,15 @@ body{
     margin: 10px 0px;
     font-weight: bold;
     font-style: italic;
+    transition: all 1s;
 }
 .header span{
     font-family: "Playwrite CU";
     font-size: 2rem; 
     color: #fbbc05;   
+}
+.header:hover{
+    transform: scale(1.1);
 }
 .player_score_box,.computer_score_box{
     margin: 10px 15px;
@@ -50,10 +54,18 @@ body{
     background-color: 	tomato;
     border-radius: 20px;
     margin: 10px 0px;
+    transition: all 1s;
+}
+.player_score_box div:hover{
+    transform: scale(1.1);
 }
 #player_1_name_copy,#player_2_name_copy{
     font-size: 1.2rem;
     font-weight: bold;
+    transition: all 1s;
+}
+#player_1_name_copy:hover,#player_2_name_copy:hover{
+    transform: scale(1.1);
 }
 .computer_score_box div{
     width: 19%;
@@ -63,6 +75,10 @@ body{
     border-radius: 20px;
     background-color: lightgreen;
     margin: 10px 0px;
+    transition: all 1s;
+}
+.computer_score_box div:hover{
+    transform: scale(1.1);
 }
 .compute_box{
     width: 100%;
@@ -87,6 +103,10 @@ body{
     background-color: black;
     padding: 2% 0;
     border-radius: 30px;
+    transition: all 1s;
+}
+#result_text:hover{
+    transform: scale(1.1);
 }
 
 .player_1_container,.player_2_container{
@@ -98,20 +118,36 @@ body{
 .player_1_container p{
     color: tomato;
     font-size: 1.7rem;
+    transition: all 1s;
 }
 .player_2_container p{
     color: lightgreen;
     font-size: 1.7rem;
+    transition: all 1s;
+}
+.player_1_container p:hover,.player_2_container p:hover{
+    transform: scale(1.1);
 }
 .next-round-button{
     position: absolute;
     transform: translate(-50%,50%);
     top:70%;
     left:50%;
-    color:white ;
-    background-color: gold;
+    color:black ;
+    border-color: gold;
+    background-color: transparent;
     padding: 15px 60px;
-    border: none;
+    border: solid;
+    border-color: gold;
     border-radius: 20px;
     font-size: 1.4rem;
+    transition: all 1s;
+    cursor: pointer;
 }
+
+.next-round-button:hover{
+    background-color: gold;
+    color: white;
+    border: none;
+    padding: 20px 70px;
+ }

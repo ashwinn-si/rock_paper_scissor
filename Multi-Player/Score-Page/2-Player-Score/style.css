@@ -77,6 +77,29 @@ body{
     border: none;
     border-radius: 20px;
     font-size: 1.4rem;
+    cursor: pointer;
+    
+}
+@media(min-width:768px){
+    .close_button{
+        background-color: transparent;
+        color: black;
+        border: solid;
+        border-color: #673ab7;
+        transition: all 1s;
+    }
+    .close_button:hover{
+        background-color: #673ab7;
+        color: white;
+        padding: 20px 70px;
+        border-color: #673ab7;
+    }
+    .player-1-score-box p,.player-2-score-box p{
+        transition: all 1s;
+    }
+    .player-1-score-box p:hover,.player-2-score-box p:hover{
+        transform: scale(1.1);
+    }
 }
 
 @media(max-width:768px){

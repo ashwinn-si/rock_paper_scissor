@@ -18,9 +18,9 @@ body{
     font-weight: bold;
 }
 .sub_head{
-    color: #ffffff;
+    color: #673ab7;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
     margin: 10px 0px;
     font-weight: bold;
 }
@@ -52,6 +52,16 @@ body{
 span{
     font-family: "Playwrite CU";
     font-size: 2.5rem;
+    color: white;
+}
+@media(min-width:768px){
+    #player_2 ,#player_3{
+        transition: all 1s;
+    }
+    #player_2:hover ,#player_3:hover{
+        color: white;
+        transform: scale(1.2);
+    }
 }
 @media screen and (max-width: 768px){
     .sub_head{

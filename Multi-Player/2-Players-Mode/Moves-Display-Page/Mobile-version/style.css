@@ -78,11 +78,11 @@ body{
 }
 .player_1_container p{
     color: tomato;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
 }
 .player_2_container p{
     color: lightgreen;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     
 }
 .result_container{

@@ -64,7 +64,12 @@ function move_storage_local(){
 //function that renders the next page
 
 function render_next_page(){
-    window.location.href="../Moves-Display-Page/index.html";
+    if(window.innerWidth>768){
+    window.location.href="../Moves-Display-Page/Desktop-version/index.html";
+    }
+    else{
+        window.location.href="../Moves-Display-Page/Mobile-version/index.html";
+    }
 }
 
 

@@ -1,4 +1,3 @@
-//round la tha check panuthu atha score ku matanum kuda
 
 //retriving the players-moves form local storage ||  no-total-rounds to be playes || current round count || players name || player score card
 
@@ -109,12 +108,12 @@ function rounds_checker(){
     if(player_score[0]==total_point_count){
         //storing the name of the winner in local storage
         localStorage.setItem("game_winner",JSON.stringify(players_name[0]));
-        window.location.href="../../Result-Page/index.html";
+        window.location.href="../../../Result-Page/index.html";
         
     }else if(player_score[1]==total_point_count){
         //storing the name of the winner in local storage
         localStorage.setItem("game_winner",JSON.stringify(players_name[1]));
-        window.location.href="../../Result-Page/index.html";
+        window.location.href="../../../Result-Page/index.html";
     }
 }
 
@@ -128,7 +127,7 @@ function score_card_storage(){
 
 //event listner that takes to the moves page
 document.getElementById("next_round_button").addEventListener("click",() =>{
-    window.location.href="../Move-Selection-Page/index.html";
+    window.location.href="../../Move-Selection-Page/index.html";
 })
 function main(){
     name_changer();
