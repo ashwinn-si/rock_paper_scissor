@@ -33,6 +33,7 @@ body{
 .header span{
     font-family: "Playwrite CU";
     font-size: 1rem;
+    color: white;
 }
 .make_move_displayer{
     width: 100%;

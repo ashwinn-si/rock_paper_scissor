@@ -39,6 +39,7 @@ body{
     border: none;
     border-radius: 20px;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 #play_again_button{
     background-color: #FAE8E0;
@@ -48,4 +49,36 @@ body{
 }
 #return_main_button{
     background-color: #B6E2D3;
+}
+@media(min-width:768px){
+    .header{
+        transition: all 1s;
+    }
+    .header:hover{
+        transform:scale(1.4) ;
+    }
+    #play_again_button,#change_points_button,#return_main_button{
+        border:solid;
+        background-color: transparent;
+        color: black;
+        transition: all 1s;
+        cursor: pointer;
+    }
+    #play_again_button:hover,#change_points_button:hover,#return_main_button:hover{
+        transform: scale(1.2);
+    }
+    #play_again_button:hover{
+        background-color: #FAE8E0;
+        color: white;
+    }
+    #change_points_button:hover{
+        background-color: #FBE5C8;
+        color: white;
+    }
+    #return_main_button:hover{
+        background-color: #B6E2D3;
+        color: white;
+    }
+    
+    
 }
