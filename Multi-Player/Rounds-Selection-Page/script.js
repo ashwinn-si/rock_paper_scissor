@@ -13,6 +13,20 @@ document.getElementById("run-21").addEventListener("click",()=>{
     main(21)
 })
 
+
+//customize rounds
+document.getElementById("custom_rounds").addEventListener("click",()=>{
+    alert("After Entering the no of rounds PRESS <p> to play");
+})
+document.addEventListener("keydown",(event)=>{
+    let key_pressed=event.key// key_pressed contains the key that is pressed
+    if (key_pressed==='p'){
+        rounds=Number(document.getElementById("custom_rounds").value);
+        main(rounds);
+    }
+})
+
+
 //function that renders the next page names are taken
 function render_next_page(){
     //retriving the no of players from local storage
