@@ -13,11 +13,11 @@ document.getElementById("run-21").addEventListener("click",()=>{
     main(21);
 })
 document.getElementById("custom_rounds").addEventListener("click",()=>{
-    alert("after entering the no of rounds press 'p' to play");
+    alert("after entering the no of rounds press <ENTER> to play");
 })
 document.addEventListener("keydown",(event)=>{
     let key_pressed=event.key// key_pressed contains the key that is pressed
-    if (key_pressed==='p'){
+    if (key_pressed==='Enter'){
         rounds=Number(document.getElementById("custom_rounds").value);
         main(rounds);
     }
